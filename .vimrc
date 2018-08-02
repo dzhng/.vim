@@ -5,6 +5,9 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" Javascript supports flow syntax
+let g:javascript_plugin_flow = 1
+
 " CtrlP ignore module and git folders
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
