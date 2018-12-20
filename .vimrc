@@ -5,6 +5,10 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" prettier
+" map space to something more useful
+nnoremap <space> :Prettier<CR>
+
 " Javascript supports flow syntax
 let g:javascript_plugin_flow = 1
 
@@ -142,7 +146,4 @@ nnoremap <F12> 11gt
 " center on searchs
 map N Nzz
 map n nzz
-
-" map space to something more useful
-nnoremap <space> vi
 
