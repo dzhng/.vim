@@ -23,6 +23,9 @@ endif
 
 set encoding=utf-8
 
+" powerline fonts
+let g:airline_powerline_fonts = 1
+
 " syntastic
 "let g:syntastic_check_on_open=1
 "let g:syntastic_quiet_warnings=1
