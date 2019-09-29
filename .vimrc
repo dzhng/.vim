@@ -10,7 +10,14 @@ filetype indent on
 nnoremap <space> :Prettier<CR>
 " use babel parser to support js features. NOTE: remove after vim-prettier
 " 1.x, since that version would support reading from prettierrc file
+" For now, manual sync with prettierrc file
 let g:prettier#config#parser = 'babel'
+let g:prettier#config#print_width = 100
+let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
 
 " Javascript supports flow syntax
 let g:javascript_plugin_flow = 1
