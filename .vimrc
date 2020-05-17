@@ -12,7 +12,7 @@ nnoremap <space> :Prettier<CR>
 " 1.x, since that version would support reading from prettierrc file
 " For now, manual sync with prettierrc file
 let g:prettier#config#parser = 'babel'
-let g:prettier#config#print_width = 100
+let g:prettier#config#print_width = 80
 let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#bracket_spacing = 'true'
