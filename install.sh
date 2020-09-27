@@ -2,5 +2,7 @@
 
 ln -fs $PWD/.prettierrc.json ~/.prettierrc.json
 ln -fs $PWD/.vimrc ~/.vimrc
-mkdir ~/.vim/backup
-mkdir ~/.vim/temp
+
+# download plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
