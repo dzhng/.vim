@@ -109,6 +109,7 @@ set showcmd
 set bg=dark	
 
 " change curser highlight colors for match parens
+set termguicolors
 highlight MatchParen ctermbg=4
 highlight Pmenu ctermbg=black ctermfg=white guibg=black
 
