@@ -18,6 +18,8 @@ Plug 'vim-airline/vim-airline'    " Vim powerline
 Plug 'ctrlpvim/ctrlp.vim'         " Fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'ts-26a/vim-darkspace'
+Plug 'w0ng/vim-hybrid'
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
@@ -106,12 +108,18 @@ set number
 set nohls
 set showcmd
 
-set bg=dark	
-
 " change curser highlight colors for match parens
+set background=dark	
 set termguicolors
+
 highlight MatchParen ctermbg=4
 highlight Pmenu ctermbg=black ctermfg=white guibg=black
+
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+let g:airline_theme='darkspace'
+let g:darkspace_italics=1
+colorscheme darkspace
 
 " behavior
 set backspace=indent,eol,start
