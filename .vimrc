@@ -17,7 +17,6 @@ Plug 'styled-components/vim-styled-components'
 Plug 'vim-airline/vim-airline'    " Vim powerline
 Plug 'ctrlpvim/ctrlp.vim'         " Fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'ts-26a/vim-darkspace'
 Plug 'w0ng/vim-hybrid'
 
@@ -42,16 +41,7 @@ set hidden
 " prettier
 " map space to something more useful
 nnoremap <space> :Prettier<CR>
-" use babel parser to support js features. NOTE: remove after vim-prettier
-" 1.x, since that version would support reading from prettierrc file
-" For now, manual sync with prettierrc file
-let g:prettier#config#parser = 'babel'
-let g:prettier#config#print_width = 80
-let g:prettier#config#trailing_comma = 'all'
-let g:prettier#config#arrow_parens = 'avoid'
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#jsx_bracket_same_line = 'false'
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " Javascript supports flow syntax
 let g:javascript_plugin_flow = 1
