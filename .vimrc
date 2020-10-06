@@ -11,9 +11,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'         " :Gblame
-Plug 'tpope/vim-endwise'          " Autocomplete end after a do
 Plug 'sheerun/vim-polyglot'       " syntax for most languages
-Plug 'styled-components/vim-styled-components'
 Plug 'vim-airline/vim-airline'    " Vim powerline
 Plug 'ctrlpvim/ctrlp.vim'         " Fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -24,9 +22,7 @@ Plug 'w0ng/vim-hybrid'
 call plug#end()              " required
 
 syntax on
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 let mapleader = "g"
 
