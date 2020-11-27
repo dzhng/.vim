@@ -7,11 +7,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" install with PlugInstall command
 " Keep Plug commands between plug#begin() and plug#end().
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'         " :Gblame
 Plug 'sheerun/vim-polyglot'       " syntax for most languages
+Plug 'delphinus/vim-firestore'    " syntax for firestore security rules
 Plug 'vim-airline/vim-airline'    " Vim powerline
 Plug 'ctrlpvim/ctrlp.vim'         " Fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -44,6 +46,7 @@ let g:javascript_plugin_flow = 1
 
 " CtrlP ignore module and git folders
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 " Use english for spellchecking, but don't spellcheck by default
 if version >= 700
