@@ -17,13 +17,14 @@ Plug 'delphinus/vim-firestore'    " syntax for firestore security rules
 Plug 'vim-airline/vim-airline'    " Vim powerline
 Plug 'ctrlpvim/ctrlp.vim'         " Fuzzy search
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ts-26a/vim-darkspace'
-Plug 'w0ng/vim-hybrid'
+Plug 'nanotech/jellybeans.vim'
+Plug 'joshdick/onedark.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()              " required
 
 syntax on
+set re=0
 filetype plugin indent on
 
 let mapleader = "g"
@@ -98,17 +99,24 @@ set nohls
 set showcmd
 
 " change curser highlight colors for match parens
-set background=dark	
-set termguicolors
-
 highlight MatchParen ctermbg=4
 highlight Pmenu ctermbg=black ctermfg=white guibg=black
 
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-let g:airline_theme='darkspace'
-let g:darkspace_italics=1
-colorscheme darkspace
+" theme configs
+" NOTE: italics will cause bad highlighting in terminals that don't support italics
+" let g:jellybeans_use_term_italics = 1
+let g:jellybeans_overrides = {
+\    'background': { 'guibg': '000000' },
+\}
+" let g:onedark_terminal_italics = 1
+let g:onedark_color_overrides = {
+\ "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" },
+\}
+let g:airline_theme = 'onedark'
+
+set background=dark	
+set termguicolors
+colorscheme onedark
 
 " behavior
 set backspace=indent,eol,start
