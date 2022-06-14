@@ -111,6 +111,7 @@ let g:jellybeans_overrides = {
 " let g:onedark_terminal_italics = 1
 let g:onedark_color_overrides = {
 \ "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" },
+\ "background": {"gui": "#000000", "cterm": "0", "cterm16": "0" }
 \}
 let g:airline_theme = 'onedark'
 
